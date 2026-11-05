@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#183d2b">
+<title>A little question for Kai</title>
+<style>
+:root{--green:#183d2b;--deep:#10271c;--sage:#9caf88;--cream:#f7f3e9;--ink:#203126;--gold:#d6b879}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:var(--ink);font-family:Georgia,'Times New Roman',serif;background:radial-gradient(circle at 15% 10%,#e3eadb 0,transparent 32%),linear-gradient(145deg,#f7f3e9,#e8eddf);overflow-x:hidden}
+button{font:inherit}
+.wrap{width:min(720px,92vw);margin:auto;padding:28px 0 54px}
+.top{display:flex;justify-content:space-between;align-items:center;color:#536b55;font:600 11px/1.2 Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase}
+.top span:last-child{border:1px solid #cbd5c2;border-radius:99px;padding:8px 12px}
+.hero{margin:54px auto 30px;text-align:center}
+.eyebrow{font:600 11px Arial,sans-serif;letter-spacing:.25em;text-transform:uppercase;color:#69816a}
+h1{font-size:clamp(42px,9vw,76px);line-height:.98;font-weight:400;color:var(--green);margin:18px 0}
+h1 em{color:#829b76;font-weight:400}
+.intro{font:16px/1.7 Arial,sans-serif;color:#59665a;max-width:460px;margin:0 auto}
+.card{background:rgba(255,255,255,.72);border:1px solid #dce3d5;border-radius:26px;padding:28px;box-shadow:0 18px 55px #243b2812;margin:22px 0}
+.section-label{font:600 10px Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#829579}
+.reasons{display:grid;gap:12px;margin-top:18px}
+.reason{display:flex;align-items:flex-start;gap:14px;padding:14px 15px;background:#f4f5ed;border-radius:16px}
+.num{width:29px;height:29px;flex:none;border-radius:50%;display:grid;place-items:center;background:#dfe8d8;color:#35583c;font:600 12px Arial,sans-serif}
+.reason p{margin:2px 0 0;font:15px/1.55 Arial,sans-serif;color:#34473a}
+.little-note{font:italic 17px/1.7 Georgia,serif;color:#536b55;text-align:center;margin:20px 8px 4px}
+.question{text-align:center;padding:34px 24px}
+.question h2{font-size:clamp(31px,7vw,48px);font-weight:400;color:var(--green);margin:14px 0}
+.question p{font:14px/1.6 Arial,sans-serif;color:#667367}
+.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:24px}
+.btn{border:0;border-radius:99px;padding:15px 27px;cursor:pointer;transition:transform .2s,box-shadow .2s;font:600 13px Arial,sans-serif}
+.btn:hover{transform:translateY(-2px)}
+.yes{background:var(--green);color:white;box-shadow:0 8px 22px #183d2b30}
+.no{background:#e8ece3;color:#435345}
+.response{display:none;text-align:center;padding:30px 15px}
+.response.show{display:block;animation:appear .6s ease both}
+.response h2{font-size:clamp(36px,8vw,58px);font-weight:400;color:var(--green);margin:12px 0}
+.response p{font:15px/1.7 Arial,sans-serif;color:#536457}
+.footer{text-align:center;color:#879382;font:11px Arial,sans-serif;letter-spacing:.08em;margin-top:28px}
+.leaf{position:fixed;pointer-events:none;opacity:.12;font-size:25px;animation:float 8s ease-in-out infinite}
+.leaf.one{top:18%;left:5%}.leaf.two{top:66%;right:6%;animation-delay:2s}
+@keyframes float{50%{transform:translateY(-18px) rotate(12deg)}}
+@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.confetti{position:fixed;top:-12px;width:8px;height:13px;pointer-events:none;z-index:5;animation:fall 3.2s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+@media(max-width:480px){.wrap{padding-top:20px}.hero{margin-top:42px}.card{padding:21px}.question{padding:28px 12px}}
+</style>
+</head>
+<body>
+<div class="leaf one">❧</div><div class="leaf two">❧</div>
+<main class="wrap">
+  <div class="top"><span>A small thing, just for you</span><span>01 / 01</span></div>
+  <header class="hero">
+    <div class="eyebrow">Made with you in mind</div>
+    <h1>Hey, <em>Kai.</em></h1>
+    <p class="intro">I wanted to do something a little more special than just sending a message. So I made you this.</p>
+  </header>
+
+  <section class="card">
+    <div class="section-label">A few things I like about you</div>
+    <div class="reasons">
+      <div class="reason"><span class="num">01</span><p>I love how caring you are. It says a lot about the kind of person you are.</p></div>
+      <div class="reason"><span class="num">02</span><p>I think you're genuinely so cute. I don't think I need to explain that one.</p></div>
+      <div class="reason"><span class="num">03</span><p>You're so sweet, and that's something I really appreciate about you.</p></div>
+      <div class="reason"><span class="num">04</span><p>I like that you get excited about the things you love, whether it's books or music.</p></div>
+      <div class="reason"><span class="num">05</span><p>I want to keep learning the little things that make you, you.</p></div>
+    </div>
+    <p class="little-note">Also, forest green after it rains is a pretty great favorite color.</p>
+  </section>
+
+  <section class="card question" id="ask">
+    <div class="section-label">Okay, here's the actual question</div>
+    <h2>Will you be my girlfriend?</h2>
+    <p>No pressure. I just wanted to ask you in a way that felt like you deserved.</p>
+    <div class="actions">
+      <button class="btn yes" id="yesBtn">Yes, I'd love to</button>
+      <button class="btn no" id="noBtn">I need to think</button>
+    </div>
+  </section>
+
+  <section class="response" id="yesResponse" aria-live="polite">
+    <div class="eyebrow">You just made me really happy</div>
+    <h2>I'm glad it's you.</h2>
+    <p>Here's to making more good memories together. ❤️</p>
+  </section>
+  <section class="response" id="noResponse" aria-live="polite">
+    <h2>That's okay.</h2>
+    <p>Take your time. I wanted you to feel comfortable being honest with me.</p>
+  </section>
+  <footer class="footer">A little page made just for Kai</footer>
+</main>
+<script>
+const yesBtn=document.getElementById('yesBtn');
+const noBtn=document.getElementById('noBtn');
+const yesResponse=document.getElementById('yesResponse');
+const noResponse=document.getElementById('noResponse');
+yesBtn.addEventListener('click',()=>{
+  document.getElementById('ask').style.display='none';
+  noResponse.classList.remove('show');
+  yesResponse.classList.add('show');
+  for(let i=0;i<65;i++){
+    const bit=document.createElement('i');bit.className='confetti';
+    bit.style.left=Math.random()*100+'vw';
+    bit.style.background=['#183d2b','#9caf88','#d6b879','#e5a6a0'][i%4];
+    bit.style.animationDelay=Math.random()*.8+'s';
+    document.body.appendChild(bit);
+    setTimeout(()=>bit.remove(),4000);
+  }
+});
+noBtn.addEventListener('click',()=>{
+  noResponse.classList.add('show');
+  noResponse.scrollIntoView({behavior:'smooth',block:'center'});
+});
+</script>
+</body>
+</html>
